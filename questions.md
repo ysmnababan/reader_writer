@@ -6,10 +6,14 @@
   because it can overload the memory. the ReadAll stores the data in memory directly, so you have to be careful. The alternative is you can store it first to tmp file, and process it further.
 3. why interface closer is important. to free? what to free, why some implementation doesn't have closer
 4. what is io.copy and why is it important
-5. what is io.buffer
+5. what is bytes.buffer
+   it is a struct that has stream, buffer. Unlike `bytes.Reader`, it has `write` capability
 6. how to now it is has closer or not
    There are multiple interface in `io` packages. so you have to read the doc or see the func to know if it implements the specific interface
 7. relation between []bytes, buffer, bytes.buffer
+   `[]bytes` is a data type that store data in memory.
+   `buffer` is a concept in computer science for a temporary storage or memory.
+   `bytes.buffer` is a struct form `bytes` that implement `buffer` concept while providing `stream` capability.
 8. why using buffer bufio, it is because performance? how difference it is?
 9. why buffer is used with flush?
 10. what is io.pipe
