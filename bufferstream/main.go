@@ -22,7 +22,7 @@ func main() {
 		panic(err)
 	}
 	fmt.Printf("ReadAll finished: got %d bytes\n", len(buf))
-
+	
 	printMem("after ReadAll")
 
 	// ====== EXAMPLE 2: STREAM DATA ======
